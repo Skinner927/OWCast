@@ -1,0 +1,28 @@
+<div class="character-tile">
+  <div class="bust-pane">
+    <img src="/assets/images/heroes/{{::tile.char.name}}.png" alt="{{::tile.char.displayName}}">
+    <div class="banner">
+      <div class="icon" ng-switch="tile.char.group">
+        <span ng-switch-when="attack" class="glyphicon glyphicon-menu-hamburger" title="{{::title.char.group}}"></span>
+        <span ng-switch-when="defense" class="glyphicon glyphicon-tower" title="{{::title.char.group}}"></span>
+        <span ng-switch-when="tank" class="glyphicon glyphicon-oil" title="{{::title.char.group}}"></span>
+        <span ng-switch-when="support" class="glyphicon glyphicon-plus" title="{{::title.char.group}}"></span>
+      </div>
+      <div class="name">{{::tile.char.displayName}}</div>
+    </div>
+  </div>
+  <div class="add-remove-btns">
+    <button class="remove" ng-show="tile.onRemove" ng-click="tile.onRemove()">
+      <span class="glyphicon glyphicon-minus" title="Remove"></span>
+    </button>
+    <button class="add" ng-show="tile.onAdd" ng-click="tile.onAdd()">
+      <span class="glyphicon glyphicon-plus" title="Add"></span>
+    </button>
+  </div>
+</div>
+
+<!--
+<span ng-click="charSel.addCharacterToSelection(char.name)">[ + ]</span>
+<span>[ {{charSel.getCharacterSelectCount(char.name)}} ]</span>
+<span ng-click="charSel.removeCharacterFromSelection(char.name)">[ - ]</span>
+-->

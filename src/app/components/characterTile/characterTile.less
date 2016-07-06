@@ -1,0 +1,98 @@
+@import 'https://fonts.googleapis.com/css?family=Contrail+One';
+
+.character-tile{
+  // http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28top\%2C\%20rgba\%28151\%2C164\%2C206\%2C1\%29\%200\%25\%2C\%20rgba\%28218\%2C206\%2C226\%2C1\%29\%2045\%25\%2C\%20rgba\%28241\%2C226\%2C234\%2C1\%29\%2055\%25\%2C\%20rgba\%28255\%2C240\%2C239\%2C1\%29\%2075\%25\%2C\%20rgba\%28255\%2C254\%2C250\%2C1\%29\%20100\%25\%29\%3B'
+  background: rgba(151,164,206,1);
+  background: -moz-linear-gradient(top, rgba(151,164,206,1) 0%, rgba(218,206,226,1) 45%, rgba(241,226,234,1) 55%, rgba(255,240,239,1) 75%, rgba(255,254,250,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(151,164,206,1)), color-stop(45%, rgba(218,206,226,1)), color-stop(55%, rgba(241,226,234,1)), color-stop(75%, rgba(255,240,239,1)), color-stop(100%, rgba(255,254,250,1)));
+  background: -webkit-linear-gradient(top, rgba(151,164,206,1) 0%, rgba(218,206,226,1) 45%, rgba(241,226,234,1) 55%, rgba(255,240,239,1) 75%, rgba(255,254,250,1) 100%);
+  background: -o-linear-gradient(top, rgba(151,164,206,1) 0%, rgba(218,206,226,1) 45%, rgba(241,226,234,1) 55%, rgba(255,240,239,1) 75%, rgba(255,254,250,1) 100%);
+  background: -ms-linear-gradient(top, rgba(151,164,206,1) 0%, rgba(218,206,226,1) 45%, rgba(241,226,234,1) 55%, rgba(255,240,239,1) 75%, rgba(255,254,250,1) 100%);
+  background: linear-gradient(to bottom, rgba(151,164,206,1) 0%, rgba(218,206,226,1) 45%, rgba(241,226,234,1) 55%, rgba(255,240,239,1) 75%, rgba(255,254,250,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97a4ce', endColorstr='#fffefa', GradientType=0 );
+
+  max-width: 180px;
+  position: relative;
+
+  img {
+    // responsive!
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bust-pane {
+    position: relative;
+
+    .banner {
+      background: rgba(40,53,79,.9);
+      color: #d0d0dc;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      .icon {
+        // this makes the hanburger
+        // look like bulets, lol
+        .glyphicon-menu-hamburger {
+          transform: rotate(90deg);
+        }
+
+        font-size: 1.2vw;
+        @media (min-width: @screen-lg-min) {
+          font-size: 1.2em;
+        }
+
+        position: absolute;
+        @spacing: 0.2em;
+        top: @spacing;
+        left: @spacing;
+      }
+
+      .name {
+        font-size: 2vw;
+        @media (min-width: @screen-lg-min) {
+          font-size: 2em;
+        }
+        line-height: 2.5em;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Contrail One', cursive;
+        font-style: italic;
+      }
+    }
+  }
+
+
+
+  .add-remove-btns {
+    display: flex;
+
+    button {
+      flex: 1;
+      border: 0;
+      line-height: 32px;
+    }
+
+    .add {
+      @bg: rgba(151,164,206,1);
+      background: @bg;
+
+      &:hover {
+        background: darken(@bg, 5%);
+      }
+    }
+
+    .remove {
+      @bg: rgba(241,226,234,1);
+      background: @bg;
+
+      &:hover {
+        background: darken(@bg, 5%);
+      }
+    }
+  }
+}

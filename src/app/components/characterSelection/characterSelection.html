@@ -1,38 +1,42 @@
-<div>
+<div class="container-fluid">
     <div>
-        <h3>Attack Chars</h3>
-        <div ng-repeat="char in charSel.attackChars">
-            {{char.displayName}}
-            <span ng-click="charSel.addCharacterToSelection(char.name)">[ + ]</span>
-            <span>[ {{charSel.getCharacterSelectCount(char.name)}} ]</span>
-            <span ng-click="charSel.removeCharacterFromSelection(char.name)">[ - ]</span>
+        <h3>Offense Chars</h3>
+        <div class="row">
+            <character-tile class="col-xs-2" ng-repeat="char in charSel.attackChars"
+                            on-add="charSel.addCharacterToSelection(char.name)"
+                            on-remove="charSel.removeCharacterFromSelection(char.name)"
+                            character="char">
+            </character-tile>
         </div>
     </div>
     <div>
         <h3>Defense Chars</h3>
-        <div ng-repeat="char in charSel.defenseChars">
-            {{char.displayName}}
-            <span ng-click="charSel.addCharacterToSelection(char.name)">[ + ]</span>
-            <span>[ {{charSel.getCharacterSelectCount(char.name)}} ]</span>
-            <span ng-click="charSel.removeCharacterFromSelection(char.name)">[ - ]</span>
+        <div class="row">
+            <character-tile class="col-xs-2" ng-repeat="char in charSel.defenseChars"
+                            on-add="charSel.addCharacterToSelection(char.name)"
+                            on-remove="charSel.removeCharacterFromSelection(char.name)"
+                            character="char">
+            </character-tile>
         </div>
     </div>
     <div>
         <h3>Tank Chars</h3>
-        <div ng-repeat="char in charSel.tankChars">
-            {{char.displayName}}
-            <span ng-click="charSel.addCharacterToSelection(char.name)">[ + ]</span>
-            <span>[ {{charSel.getCharacterSelectCount(char.name)}} ]</span>
-            <span ng-click="charSel.removeCharacterFromSelection(char.name)">[ - ]</span>
+        <div class="row">
+            <character-tile class="col-xs-2" ng-repeat="char in charSel.tankChars"
+                            on-add="charSel.addCharacterToSelection(char.name)"
+                            on-remove="charSel.removeCharacterFromSelection(char.name)"
+                            character="char">
+            </character-tile>
         </div>
     </div>
     <div>
         <h3>Support Chars</h3>
-        <div ng-repeat="char in charSel.supportChars">
-            {{char.displayName}}
-            <span ng-click="charSel.addCharacterToSelection(char.name)">[ + ]</span>
-            <span>[ {{charSel.getCharacterSelectCount(char.name)}} ]</span>
-            <span ng-click="charSel.removeCharacterFromSelection(char.name)">[ - ]</span>
+        <div class="row">
+            <character-tile class="col-xs-2" ng-repeat="char in charSel.supportChars"
+                            on-add="charSel.addCharacterToSelection(char.name)"
+                            on-remove="charSel.removeCharacterFromSelection(char.name)"
+                            character="char">
+            </character-tile>
         </div>
     </div>
 </div>
